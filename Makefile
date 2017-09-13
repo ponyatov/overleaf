@@ -4,7 +4,7 @@ TEX += hyper.tex
 TEX += comp.tex
 TEX += autogen.tex
 TEX += expert.tex
-TEX += bib.tex
+TEX += ack.tex bib.tex
 
 FIG = fig/architecture.png fig/hello.png fig/mobile.png fig/person.png
 
