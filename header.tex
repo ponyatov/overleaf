@@ -1,0 +1,27 @@
+\documentclass[oneside,12pt]{article}
+\usepackage[a5paper,margin=5mm]{geometry}%,showframe
+%\usepackage{showframe}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage[colorlinks,
+	linkcolor={red!50!black},citecolor={blue!50!black},urlcolor={blue!80!black}]{hyperref}
+\usepackage[pdftex]{graphicx}
+
+% relative sectioning
+\usepackage{ifthen}
+\newcounter{secdepth}\setcounter{secdepth}{0}
+\newcommand{\secup}{\addtocounter{secdepth}{1}}
+\newcommand{\secdown}{\addtocounter{secdepth}{-1}}
+\newcommand{\secrel}[1]{
+\ifthenelse{\equal{\value{secdepth}}{0}}{\part{#1}}{}
+\ifthenelse{\equal{\value{secdepth}}{-1}}{\chapter{#1}}{}
+\ifthenelse{\equal{\value{secdepth}}{-2}}{\section{#1}}{}
+\ifthenelse{\equal{\value{secdepth}}{-3}}{\subsection{#1}}{}
+\ifthenelse{\value{secdepth} < -3}{\subsubsection{#1}}{}
+}
+\newcommand{\secly}[1]{\section*{#1}\addcontentsline{toc}{section}{#1}}
+\newcommand{\subsecly}[1]{\section*{#1}\addcontentsline{toc}{subsection}{#1}}
+
+% misc
+
+\newcommand{\email}[1]{$<$\href{#1}{#1}$>$}

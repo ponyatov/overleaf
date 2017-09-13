@@ -1,24 +1,27 @@
-% article draft
+% article draft @ https://www.overleaf.com/11039646jmkfnhxvqpfp
+\input{header}
 
-\documentclass[oneside,12pt]{article}
-\usepackage[a5paper,margin=5mm]{geometry}%,showframe
-%\usepackage{showframe}
-\usepackage[utf8]{inputenc}
-\usepackage{hyperref}
-\usepackage[pdftex]{graphicx}
+\title{
+Using active hypergraph database\\
+as software development approach:\\
+\Huge{Graph Driven Programming}}
 
-\newcommand{\email}[1]{$<$\href{#1}{#1}$>$}
-
-\title{Using active hypergraph database\\as software development approach:\\\Huge{Graph Driven Programming}}
 \author{\small{\copyright\ Dmitry Ponyatov \email{dponyatov@gmail.com}, free researcher, 2017}}
 
 \begin{document}
 \maketitle
-%\tableofcontents
+\tableofcontents
 
 \begin{abstract}\noindent
 Software development and program architecture engineering has grows complexity in last decades. The existing zoo of programming languages, para\-digms, hardware platforms and operating systems, combined with the software development market requirements, exceeds the capabilities of a particular individual developer. Thus, it is required to create a powerful tool for compensation of software systems development complexity, that combines design tools, RAD, MDP, simulation debugging, static and dynamic analysis of programs, parallel computing support, and, first of all, an expert system and knowledge bases provides knowledge storage, fuzzy search and inference not only in software engineering, but also in applied fields (mathematics and numerical methods, physics, chemistry, mechanics and structural engineering, CAD, electronics, digital signal processing, business planning, accounting and logistics, task and time management, etc).
 \end{abstract}
+
+\secly{Introduction}
+
+Software development and program architecture engineering has grows complexity in last decades. This problem is especially notable in hard real-time control systems applied in safety-critical domains: avionics, aerospace, automobiles, and medicine, and covered by tons of safety reglaments and standards. \cite{book1}
+
+If we look on some random typical software developer vacancies, we see huge amount of conventional requirements on knowledge and skills (emphasized in text), making developer live damn scary: to make yourself promising in your profession, you must spend an everyday self-learning in your work and spare time.
+
 
 \noindent\includegraphics[width=\textwidth]{fig/hello.png}
 
@@ -27,5 +30,11 @@ Software development and program architecture engineering has grows complexity i
 \noindent\includegraphics[width=\textwidth]{fig/mobile.png}
 
 \noindent\includegraphics[width=0.5\textwidth]{fig/person.png}
+
+\begin{thebibliography}{99}
+\addcontentsline{toc}{section}{References}
+\bibitem{book1} book1
+\end{thebibliography}
+
 
 \end{document}
