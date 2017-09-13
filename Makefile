@@ -2,6 +2,7 @@ TEX = main.tex header.tex intro.tex
 TEX += model.tex neo4j.tex samplemain.tex
 TEX += hyper.tex 
 TEX += comp.tex
+TEX += autogen.tex
 TEX += bib.tex
 
 FIG = fig/architecture.png fig/hello.png fig/mobile.png fig/person.png
