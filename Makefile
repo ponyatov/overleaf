@@ -1,9 +1,14 @@
-TEX = main.tex header.tex intro.tex model.tex bib.tex
+TEX = main.tex header.tex intro.tex 
+TEX += model.tex neo4j.tex samplemain.tex
+TEX += hyper.tex 
+TEX += bib.tex
 
 FIG = fig/architecture.png fig/hello.png fig/mobile.png fig/person.png
 
+SRC = src/hello.c
+
 LATEX = pdflatex -halt-on-error
-main.pdf: $(TEX) $(FIG)
+main.pdf: $(TEX) $(FIG) $(SRC)
 	$(LATEX) $< && $(LATEX) $< 
 	
 fig/%.png: ../fig/%.dot

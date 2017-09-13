@@ -8,11 +8,30 @@ itself.
 
 So graph structure can represent wide range of different things, look at your
 whiteboard with some schemes for example. Let’s look on our prototype system
-architecture \autoref{fig:architecture}:
+architecture at \autoref{fig:architecture}. As you can see that there is no
+reason to add any extra notes: all knowledge embodied in this graph is visually
+understandable.
 
 \fig{fig/architecture.png}{architecture}{Active graph system
 architecture}{width=\textwidth}
 
 \fig{fig/mobile.png}{mobile}{Mobile client implementation}{width=\textwidth}
+
+\clearpage
+
+\secrel{Graph Databases}\secdown
+
+Most graph databases uses data models, not so powerful to implement graphs shown
+on figures \autoref{fig:architecture},\autoref{fig:mobile} natively. As you can
+see, there is some elements not supported: grouping and containers, links on
+links, N-ary relations with \mbox{$N>2$} (and custom visualization
+representations). Some of this can be described in hypergraph (see
+\autoref{hyper}), but for currently existing graphdb engines we need some
+transformations.
+
+\input{neo4j}
+\secup
+
+\input{samplemain}
 
 \secup

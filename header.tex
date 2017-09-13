@@ -39,6 +39,7 @@
 % misc
 
 \renewcommand{\emph}[1]{\textbf{#1}}
+\newcommand{\note}[1]{\footnote{\ #1}}
 
 % [nosep] option in lists/enums
 \usepackage{enumitem}
@@ -52,9 +53,14 @@
 
 \newcommand{\C}[1]{\lang{C_{#1}}}
 \newcommand{\cpp}{\lang{C_{+^+}}}
+\newcommand{\java}{\lang{Java}}
 
 \newcommand{\prolog}{\lang{Prolog}}
 \newcommand{\xsb}{\prog{XSB}}
 
 \newcommand{\neo}{\prog{neo4j}}
 
+%% listings
+\usepackage{verbatim}
+\usepackage{listings}
+\newcommand{\lst}[3]{\lstinputlisting[title=#2\ :\ #3]{#1}}
