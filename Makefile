@@ -6,5 +6,5 @@ LATEX = pdflatex -halt-on-error
 main.pdf: $(TEX) $(FIG)
 	$(LATEX) $< && $(LATEX) $< 
 	
-fig/%: ../fig/%
-	cp $< $@
+fig/%.png: ../fig/%.dot
+	dot -T png -o $@ $<
