@@ -15,8 +15,8 @@
 \usepackage[pdftex]{graphicx}
 \newcommand{\fig}[4]{
 \begin{figure}[h]
-\centering\noindent\includegraphics[#4]{#1}
-\protect\caption{#3}\label{fig:#2}
+{\centering\noindent\includegraphics[#4]{#1}
+\protect\caption{#3}\label{fig:#2}}
 \end{figure}
 }
 \newcommand{\figref}[1]{$[$fig.{\ref{#1}}$]$}
