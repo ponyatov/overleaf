@@ -1,4 +1,4 @@
-TEX = main.tex header.tex intro.tex
+TEX = main.tex header.tex intro.tex model.tex bib.tex
 
 FIG = fig/architecture.png fig/hello.png fig/mobile.png fig/person.png
 
