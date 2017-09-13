@@ -4,6 +4,7 @@ TEX += hyper.tex
 TEX += comp.tex
 TEX += autogen.tex
 TEX += expert.tex
+TEX += plan.tex
 TEX += doc.tex
 TEX += dos.tex
 TEX += plc.tex
