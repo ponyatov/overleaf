@@ -10,7 +10,8 @@ TEX += dos.tex
 TEX += plc.tex
 TEX += ack.tex bib.tex
 
-FIG = fig/architecture.png fig/hello.png fig/mobile.png fig/person.png
+FIG = fig/architecture.png fig/hello.png fig/mobile.png 
+FIG += fig/person1.png fig/person2.png
 
 SRC = src/hello.c
 

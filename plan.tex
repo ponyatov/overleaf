@@ -73,12 +73,46 @@ First create yourself as center of Universe:
 \begin{verbatim}
 $ merge
     (:me{ firstname:'Dmitry', secondname:'Ponyatov',
-          email:'dponyatov@gmail.com'})
+          email:'dponyatov@gmail.com'},
+          title:'Ponyatov')
 -[:isa]->
     (:class:Person{title:'Person'})
 \end{verbatim}
 
-\fig{fig/person.png}{person}{}{width=0.5\textwidth}
+\fig{fig/person1.png}{person1}{You is-a Person}{width=0.5\textwidth}
+
+Not so impressive, so we need some good look for our data schemes. We can do it
+using some View\note{I mean Model View Controller template}\ attributes, which
+will set view representation.
+
+So, first make query\note{later we will make it triggerable} which will update
+all class-looking elements:
+
+\begin{verbatim}
+$ match (x)-[r:isa]->(y) set
+        r.color='blue',r.fontcolor='blue',
+        y:class,y.shape='box',y.fillcolor='lightpink'
+    return x,r,y 
+\end{verbatim}
+
+And emphasize youself as center element:
+
+\begin{verbatim}
+$ match (x:me) set x.fillcolor='green',x.shape='circle'
+\end{verbatim}
+
+\fig{fig/person2.png}{person2}{Colorized variant looks
+much better}{width=0.5\textwidth}
+
+We use \href{http://graphviz.org/}{GraphViz} so available \emph{view
+attributes}\ --- shape and color names see in manual:
+\bigskip
+
+\begin{tabular}{l l}
+Colors:&\url{http://www.graphviz.org/doc/info/colors.html}\\
+Shapes:&\url{http://www.graphviz.org/doc/info/shapes.html}\\
+\end{tabular}
+
 
 \secrel{Android KB}
 \secrel{Resource analysis in task management and logistics applications}
